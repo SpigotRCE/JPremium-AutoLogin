@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "jpal",
+  "version": "${version}",
+
+  "name": "JPremiumAutoLogin",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/jpal/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["io.github.spigotrce.jpal.client.JpalClient"],
+    "main": ["io.github.spigotrce.jpal.Jpal"]
+  },
+
+  "mixins": [
+    "jpal.mixins.json"
+    ,{
+      "config": "jpal.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
